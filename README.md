@@ -1,3 +1,3 @@
 # landing-page
 
-My current page for my gaming content. 
+Creating a new page for my gaming content
