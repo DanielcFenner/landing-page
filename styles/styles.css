@@ -75,7 +75,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
     margin: 8px 24px;
 }
 
@@ -86,7 +86,7 @@ body {
 
 .card button {
     text-align: center;
-    width: 100px;
+    width: 70px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
