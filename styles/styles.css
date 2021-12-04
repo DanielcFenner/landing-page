@@ -7,37 +7,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 32px);
     color: white;
     font-family: "Poppins", sans-serif;
-    background: url("img/dots.svg");
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.4000000000000001px, rgba(0,0,0,0) 1.4000000000000001px);
+    background-size: 28px 28px;
     background-repeat: repeat;
+    margin: 16px;
 }
 
 body {
-    background: linear-gradient(-45deg, #d7816a, #bd4f6c, #a4508b, #5f0a87);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
+    background: radial-gradient(#d7816a, #bd4f6c, #a4508b, #66198a);
+    background-position: center;
+    animation: gradient 20s ease infinite;
 }
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-size: 125%;
     }
     50% {
-        background-position: 100% 50%;
+        background-size: 400%;
     }
     100% {
-        background-position: 0% 50%;
+        background-size: 125%;
     }
 }
 
 .card {
     display: flex;
     flex-flow: column wrap;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.178);
-    width: 50%;
+    width: 500px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.315);
     align-items: center;
     gap: 24px;
@@ -45,15 +47,11 @@ body {
     text-align: center;
 }
 
-
-.card::before {
-    filter: blur(10px);
-}
-
 .card img {
     width: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 0px;
 }
 
 .buttons {
@@ -64,27 +62,32 @@ body {
     margin: 8px 24px;
 }
 
+
+.card p {
+    padding: 0px 16px;
+}
+
 .card button {
     text-align: center;
     width: 100px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 16px;
     color: white;
     font-size: 16px;
-    border-style: none;
-    background-color: #5f0a87;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    background-color: rgba(0,0,0,0);
+    font-size: 24px;
     transition: background-color .25s;
 }
 
 .card button:hover {
-    background: linear-gradient(-45deg, #d7816a, #bd4f6c, #a4508b, #5f0a87);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    background-color: rgba(255, 255, 255, 0.315);
     cursor: pointer;
 }
-
 
 
 
