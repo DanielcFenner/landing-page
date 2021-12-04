@@ -3,6 +3,11 @@
     margin: 0;
 }
   
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
 #wrapper {
     display: flex;
     align-items: center;
