@@ -8,11 +8,16 @@ a {
     text-decoration: inherit; /* no underline */
   }
 
+  html {
+    height: -webkit-fill-available;
+  }
+
 #wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 32px);
+    min-height: -webkit-fill-available;
     color: white;
     font-family: "Poppins", sans-serif;
     background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.4000000000000001px, rgba(0,0,0,0) 1.4000000000000001px);
