@@ -68,7 +68,7 @@ a {
 }
 
 body {
-    background:  radial-gradient(circle, #0091ff, #5982f4, #7e71e5, #985fd1, #ab4aba);
+    background:  radial-gradient(circle, var(--blue8), #5982f4, #7e71e5, #985fd1, #ab4aba);
     background-position: center;
     animation: gradient 20s ease infinite;
 }
@@ -90,7 +90,7 @@ body {
     flex-flow: column wrap;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.178);
-    width: 500px;
+    width: 450px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.315);
     align-items: center;
     gap: 24px;
