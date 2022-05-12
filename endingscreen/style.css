@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --blackA1: hsl(0 0% 0% / 0.012);
+  --blackA2: hsl(0 0% 0% / 0.027);
+  --blackA3: hsl(0 0% 0% / 0.047);
+  --blackA4: hsl(0 0% 0% / 0.071);
+  --blackA5: hsl(0 0% 0% / 0.09);
+  --blackA6: hsl(0 0% 0% / 0.114);
+  --blackA7: hsl(0 0% 0% / 0.141);
+  --blackA8: hsl(0 0% 0% / 0.22);
+  --blackA9: hsl(0 0% 0% / 0.439);
+  --blackA10: hsl(0 0% 0% / 0.478);
+  --blackA11: hsl(0 0% 0% / 0.565);
+  --blackA12: hsl(0 0% 0% / 0.91);
+  --blue1: hsl(206 100% 99.2%);
+  --blue2: hsl(210 100% 98%);
+  --blue3: hsl(209 100% 96.5%);
+  --blue4: hsl(210 98.8% 94%);
+  --blue5: hsl(209 95% 90.1%);
+  --blue6: hsl(209 81.2% 84.5%);
+  --blue7: hsl(208 77.5% 76.9%);
+  --blue8: hsl(206 81.9% 65.3%);
+  --blue9: hsl(206 100% 50%);
+  --blue10: hsl(208 100% 47.3%);
+  --blue11: hsl(211 100% 43.2%);
+  --blue12: hsl(211 100% 15%);
+  --plum1: hsl(292 90% 99.4%);
+  --plum2: hsl(300 100% 98.6%);
+  --plum3: hsl(299 71.2% 96.4%);
+  --plum4: hsl(299 62% 93.8%);
+  --plum5: hsl(298 56.1% 90.5%);
+  --plum6: hsl(296 51.3% 85.8%);
+  --plum7: hsl(295 48.2% 78.9%);
+  --plum8: hsl(292 47.7% 70.8%);
+  --plum9: hsl(292 45% 51%);
+  --plum10: hsl(292 50.2% 46.9%);
+  --plum11: hsl(292 60% 42.5%);
+  --plum12: hsl(291 66% 14%);
+  --amber1: hsl(39 70% 99%);
+  --amber2: hsl(40 100% 96.5%);
+  --amber3: hsl(44 100% 91.7%);
+  --amber4: hsl(43 100% 86.8%);
+  --amber5: hsl(42 100% 81.8%);
+  --amber6: hsl(38 99.7% 76.3%);
+  --amber7: hsl(36 86.1% 67.1%);
+  --amber8: hsl(35 85.2% 55.1%);
+  --amber9: hsl(39 100% 57%);
+  --amber10: hsl(35 100% 55.5%);
+  --amber11: hsl(30 100% 34%);
+  --amber12: hsl(20 80% 17%);
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    var(--blue8),
+    #5982f4,
+    #7e71e5,
+    #985fd1,
+    #ab4aba
+  );
+  background-position: center;
+  animation: gradient 20s ease infinite;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 32px);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1.4000000000000001px,
+    rgba(0, 0, 0, 0) 1.4000000000000001px
+  );
+  background-size: 28px 28px;
+  background-repeat: repeat;
+  margin: 16px;
+}
+
+@keyframes popin {
+  from {
+    transform: translate(0px, 150px);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+}
+
+.text {
+  font-size: 4rem;
+  animation: popin;
+  animation-duration: 5s;
+}
