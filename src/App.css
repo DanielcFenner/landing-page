@@ -1,0 +1,50 @@
+.app {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(60deg, var(--blue9), var(--purple9));
+  height: 20vh;
+  width: 100%;
+  transform: rotate(-5deg) scale(175%);
+  z-index: 0;
+}
+
+main {
+  width: min(1080px, 100%);
+  border: 1px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 0rem;
+  z-index: 1;
+}
+
+.left {
+  padding: 0rem 1rem;
+}
+
+.right {
+  padding: 0rem 1rem;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.video {
+  aspect-ratio: 16/9;
+  width: 100%;
+  background-color: aqua;
+}
