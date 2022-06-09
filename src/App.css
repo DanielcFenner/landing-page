@@ -26,7 +26,13 @@
 }
 
 .gradient {
-  background: linear-gradient(60deg, var(--blue9), var(--purple9));
+  background: linear-gradient(
+    -45deg,
+    var(--blue9),
+    var(--purple9),
+    var(--pink9),
+    var(--amber9)
+  );
   width: 100%;
   height: 100%;
   background-size: 400% 400%;
@@ -66,5 +72,15 @@ img {
 .video {
   aspect-ratio: 16/9;
   width: 100%;
-  background-color: aqua;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  border-style: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--blue1);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
