@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400&display=swap");
 @import "@radix-ui/colors/blue.css";
 @import "@radix-ui/colors/blueDark.css";
 @import "@radix-ui/colors/purple.css";
@@ -9,7 +8,8 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   font-weight: 400;
-  color: var(--blue12);
+  color: var(--blue1);
+  line-height: 150%;
 }
 
 body {

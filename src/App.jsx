@@ -5,12 +5,14 @@ import portrait from "./assets/portrait.webp";
 function App() {
   return (
     <div class="app">
-      <div class="gradient"></div>
+      <div class="gradientContainer">
+        <div class="gradient"></div>
+      </div>
       <main>
         <div class="left">
           <img src={portrait}></img>
           <h1>Daniel Fenner</h1>
-          <p>gamer streamer runner</p>
+          <p>Gamer, streamer, runner, aspiring software dev</p>
           <div class="buttonGrid">
             <button>Twitch</button>
             <button>YouTube</button>

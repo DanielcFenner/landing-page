@@ -4,20 +4,38 @@
   position: relative;
 }
 
-.gradient {
+.gradientContainer {
   position: absolute;
   top: 0;
-  background: linear-gradient(60deg, var(--blue9), var(--purple9));
-  height: 20vh;
+  height: 70vh;
   width: 100%;
-  transform: rotate(-5deg) scale(175%);
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
   z-index: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient {
+  background: linear-gradient(60deg, var(--blue9), var(--purple9));
+  width: 100%;
+  height: 100%;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
 
 main {
   width: min(1080px, 100%);
   border: 1px;
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 4rem 0rem;
@@ -40,7 +58,9 @@ main {
 
 img {
   border-radius: 1rem;
-  width: 100%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
 }
 
 .video {
