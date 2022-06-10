@@ -62,7 +62,7 @@ main {
 .buttonGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 img {
@@ -79,6 +79,14 @@ button {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--blue4);
 }
 
 .live {

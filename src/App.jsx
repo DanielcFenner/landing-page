@@ -8,7 +8,6 @@ import {
   BiLogoYoutube,
   BiLogoTiktok,
 } from "solid-icons/bi";
-import SocialButton from "./components/SocialButton";
 
 function App() {
   return (
@@ -21,11 +20,26 @@ function App() {
           <h1>@danielfenner</h1>
           <p>Gamer, streamer, runner, aspiring software dev</p>
           <div class="buttonGrid">
-            <SocialButton name="Twitch" icon={BiLogoTwitch} />
-            <SocialButton name="YouTube" icon={BiLogoYoutube} />
-            <SocialButton name="Twitter" icon={BiLogoTwitter} />
-            <SocialButton name="Instagram" icon={BiLogoInstagramAlt} />
-            <SocialButton name="TikTok" icon={BiLogoTiktok} />
+            <button>
+              <div>Twitch</div>
+              <BiLogoTwitch size={21} />
+            </button>
+            <button>
+              <div>YouTube</div>
+              <BiLogoYoutube size={21} />
+            </button>
+            <button>
+              <div>Twitter</div>
+              <BiLogoTwitter size={21} />
+            </button>
+            <button>
+              <div>Instagram</div>
+              <BiLogoInstagramAlt size={21} />
+            </button>
+            <button>
+              <div>TikTok</div>
+              <BiLogoTiktok size={21} />
+            </button>
           </div>
         </div>
         <div class="right">
@@ -33,8 +47,6 @@ function App() {
             src="https://player.twitch.tv/?channel=danielfenner&parent=localhost&muted=true"
             allowfullscreen
           ></iframe>
-
-          <h1 class="live">Live now</h1>
         </div>
       </main>
     </div>
