@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the popup element */
+        * {
+            --plum-1: #181118;
+  --plum-2: #201320;
+  --plum-3: #351a35;
+  --plum-4: #451d47;
+  --plum-5: #512454;
+  --plum-6: #5e3061;
+  --plum-7: #734079;
+  --plum-8: #92549c;
+  --plum-9: #ab4aba;
+  --plum-10: #b658c4;
+  --plum-11: #e796f3;
+  --plum-12: #f4d4f4;
+            --violet-1: hsl(255, 65.0%, 99.4%);
+            --violet-2: hsl(252, 100%, 99.0%);
+            --violet-3: hsl(252, 96.9%, 97.4%);
+            --violet-4: hsl(252, 91.5%, 95.5%);
+            --violet-5: hsl(252, 85.1%, 93.0%);
+            --violet-6: hsl(252, 77.8%, 89.4%);
+            --violet-7: hsl(252, 71.0%, 83.7%);
+            --violet-8: hsl(252, 68.6%, 76.3%);
+            --violet-9: hsl(252, 56.0%, 57.5%);
+            --violet-10: hsl(251, 48.1%, 53.5%);
+            --violet-11: hsl(250, 43.0%, 48.0%);
+            --violet-12: hsl(250, 43.0%, 26.0%);
+            --blue-1: hsl(206, 100%, 99.2%);
+            --blue-2: hsl(210, 100%, 98.0%);
+            --blue-3: hsl(209, 100%, 96.5%);
+            --blue-4: hsl(210, 98.8%, 94.0%);
+            --blue-5: hsl(209, 95.0%, 90.1%);
+            --blue-6: hsl(209, 81.2%, 84.5%);
+            --blue-7: hsl(208, 77.5%, 76.9%);
+            --blue-8: hsl(206, 81.9%, 65.3%);
+            --blue-9: hsl(206, 100%, 50.0%);
+            --blue-10: hsl(208, 93.5%, 47.4%);
+            --blue-11: hsl(211, 90.0%, 42.0%);
+            --blue-12: hsl(216, 71.0%, 23.0%);
+            --orange-1: hsl(24, 70.0%, 99.0%);
+            --orange-2: hsl(22, 100%, 97.8%);
+            --orange-3: hsl(34, 100%, 91.7%);
+            --orange-4: hsl(33, 100%, 86.6%);
+            --orange-5: hsl(31, 100%, 82.2%);
+            --orange-6: hsl(27, 100%, 78.4%);
+            --orange-7: hsl(21, 100%, 74.5%);
+            --orange-8: hsl(19, 80.1%, 64.5%);
+            --orange-9: hsl(24, 94.0%, 50.0%);
+            --orange-10: hsl(24, 100%, 46.5%);
+            --orange-11: hsl(16, 45.0%, 41.5%);
+            --orange-12: hsl(16, 50.0%, 23.0%);
+
+        }
+
+        body {
+            margin: 32px;
+            font-family: "Open-Runde", sans-serif;
+            color: white;
+            line-height: 0px;
+        }
+
+        img {
+            height: 150px;
+            margin-bottom: 12px;
+            /* transform: scaleX(-1); */
+        }
+
+        .flexgap {
+            position:absolute;
+            gap: 16px;
+            bottom: 110px;
+        }
+
+        #popup {
+            display: none;
+            flex-direction: column;
+            margin-top: 70px;
+            padding: 24px;
+            padding-bottom: 16px;
+            padding-top: 85px;
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, var(--plum-4) 0%, var(--plum-3) 50%, var(--plum-1) 100%);
+
+            border: 0px solid rgba(255, 255, 255, 0.89);
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: popupAnimationIn 0.3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        /* Keyframes for popup animation when it appears */
+        @keyframes popupAnimationIn {
+            0% {
+                transform: translate(-200%, 0%) scale(0.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translate(0%, 0%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for popup animation when it disappears */
+        @keyframes popupAnimationOut {
+            0% {
+                transform: translate(0%, 0%) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-200%, 0%) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes upDown {
+            0% {
+                transform: translatey(0px);
+            }
+
+            100% {
+                transform: translatey(30px);
+            }
+        }
+
+        @keyframes translate {
+            to {
+                transform: translatex(900%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The popup element -->
+    <div id="popup">
+        <div class="flexgap"><img src="fengift.png"></div>
+        <h1>SUPPORT-A-STREAMER</h1>
+        <p>Gift 2 subs and get an echo skin for free !sas</p>
+    </div>
+
+    <script>
+
+        function sineAnimation() {
+            const popup = document.getElementById('popup');
+            popup.style.animation = 'upDown 1s alternate infinite ease-in-out';
+        }
+
+        // Function to show the popup
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'inline-flex';
+            popup.style.animation = 'popupAnimationIn 0.3s ease-in-out';
+            setTimeout(() => sineAnimation(), 300);
+            setTimeout(() => hidePopup(popup), 6000); // Hide after 5 seconds
+        }
+
+        // Function to hide the popup
+        function hidePopup(popup) {
+            popup.style.animation = 'popupAnimationOut 0.3s ease-in-out';
+            setTimeout(() => {
+                popup.style.display = 'none';
+                setTimeout(showPopup, 600000); // Show after 10 minutes (600,000 milliseconds)
+            }, 300); // Wait for the fade-out animation to complete (1 second)
+        }
+
+        // Initially, show the popup
+        showPopup();
+    </script>
+</body>
+
+</html>
