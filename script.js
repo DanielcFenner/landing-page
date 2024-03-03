@@ -8,7 +8,7 @@ canvas.height = canvas.clientHeight * dpr;
 ctx.scale(dpr, dpr);
 
 // Star representation
-let starSpeed = 0.1;
+let starSpeed = 0.4;
 function Star() {
   this.x = Math.random() * (canvas.width / dpr);
   this.y = Math.random() * (canvas.height / dpr);

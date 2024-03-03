@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Open-Runde"; /* Name your font */
+  src: url("fonts/OpenRunde-Regular.woff2") format("woff2"),
+    url("fonts/OpenRunde-Regular.woff") format("woff"); /* Add more formats if needed */
+}
+
 :root {
   --slate-1: #111113;
   --slate-2: #18191b;
@@ -51,7 +57,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Open-Runde", "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "slnt" 0;
@@ -154,6 +160,7 @@ h1 {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -0.025em;
+  font-weight: 600;
 }
 
 h2 {
