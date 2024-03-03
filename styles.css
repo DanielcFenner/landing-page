@@ -1,132 +1,159 @@
 :root {
-    --blue-1: hsl(212, 35.0%, 9.2%);
-    --blue-2: hsl(216, 50.0%, 11.8%);
-    --blue-3: hsl(214, 59.4%, 15.3%);
-    --blue-4: hsl(214, 65.8%, 17.9%);
-    --blue-5: hsl(213, 71.2%, 20.2%);
-    --blue-6: hsl(212, 77.4%, 23.1%);
-    --blue-7: hsl(211, 85.1%, 27.4%);
-    --blue-8: hsl(211, 89.7%, 34.1%);
-    --blue-9: hsl(206, 100%, 50.0%);
-    --blue-10: hsl(209, 100%, 60.6%);
-    --blue-11: hsl(210, 100%, 66.1%);
-    --blue-12: hsl(206, 98.0%, 95.8%);
-
-    --slate-1: hsl(200, 7.0%, 8.8%);
-    --slate-2: hsl(195, 7.1%, 11.0%);
-    --slate-3: hsl(197, 6.8%, 13.6%);
-    --slate-4: hsl(198, 6.6%, 15.8%);
-    --slate-5: hsl(199, 6.4%, 17.9%);
-    --slate-6: hsl(201, 6.2%, 20.5%);
-    --slate-7: hsl(203, 6.0%, 24.3%);
-    --slate-8: hsl(207, 5.6%, 31.6%);
-    --slate-9: hsl(206, 6.0%, 43.9%);
-    --slate-10: hsl(206, 5.2%, 49.5%);
-    --slate-11: hsl(206, 6.0%, 63.0%);
-    --slate-12: hsl(210, 6.0%, 93.0%);
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --blue-1: hsl(206, 100%, 99.2%);
-        --blue-2: hsl(210, 100%, 98.0%);
-        --blue-3: hsl(209, 100%, 96.5%);
-        --blue-4: hsl(210, 98.8%, 94.0%);
-        --blue-5: hsl(209, 95.0%, 90.1%);
-        --blue-6: hsl(209, 81.2%, 84.5%);
-        --blue-7: hsl(208, 77.5%, 76.9%);
-        --blue-8: hsl(206, 81.9%, 65.3%);
-        --blue-9: hsl(206, 100%, 50.0%);
-        --blue-10: hsl(208, 100%, 47.3%);
-        --blue-11: hsl(211, 100%, 43.2%);
-        --blue-12: hsl(211, 100%, 15.0%);
-
-        --slate-1: hsl(206, 30.0%, 98.8%);
-        --slate-2: hsl(210, 16.7%, 97.6%);
-        --slate-3: hsl(209, 13.3%, 95.3%);
-        --slate-4: hsl(209, 12.2%, 93.2%);
-        --slate-5: hsl(208, 11.7%, 91.1%);
-        --slate-6: hsl(208, 11.3%, 88.9%);
-        --slate-7: hsl(207, 11.1%, 85.9%);
-        --slate-8: hsl(205, 10.7%, 78.0%);
-        --slate-9: hsl(206, 6.0%, 56.1%);
-        --slate-10: hsl(206, 5.8%, 52.3%);
-        --slate-11: hsl(206, 6.0%, 43.5%);
-        --slate-12: hsl(206, 24.0%, 9.0%);
-
-    }
+  --slate-1: #111113;
+  --slate-2: #18191b;
+  --slate-3: #212225;
+  --slate-4: #272a2d;
+  --slate-5: #2e3135;
+  --slate-6: #363a3f;
+  --slate-7: #43484e;
+  --slate-8: #5a6169;
+  --slate-9: #696e77;
+  --slate-10: #777b84;
+  --slate-11: #b0b4ba;
+  --slate-12: #edeef0;
+  --slate-a1: #00000000;
+  --slate-a2: #d8f4f609;
+  --slate-a3: #ddeaf814;
+  --slate-a4: #d3edf81d;
+  --slate-a5: #d9edfe25;
+  --slate-a6: #d6ebfd30;
+  --slate-a7: #d9edff40;
+  --slate-a8: #d9edff5d;
+  --slate-a9: #dfebfd6d;
+  --slate-a10: #e5edfd7b;
+  --slate-a11: #f1f7feb5;
+  --slate-a12: #fcfdffef;
+  --blue-1: #0d1520;
+  --blue-2: #111927;
+  --blue-3: #0d2847;
+  --blue-4: #003362;
+  --blue-5: #004074;
+  --blue-6: #104d87;
+  --blue-7: #205d9e;
+  --blue-8: #2870bd;
+  --blue-9: #0090ff;
+  --blue-10: #3b9eff;
+  --blue-11: #70b8ff;
+  --blue-12: #c2e6ff;
+  --purple-1: #18111b;
+  --purple-2: #1e1523;
+  --purple-3: #301c3b;
+  --purple-4: #3d224e;
+  --purple-5: #48295c;
+  --purple-6: #54346b;
+  --purple-7: #664282;
+  --purple-8: #8457aa;
+  --purple-9: #8e4ec6;
+  --purple-10: #9a5cd0;
+  --purple-11: #d19dff;
+  --purple-12: #ecd9fa;
 }
 
 body {
-    background-color: var(--slate-1);
-    font-family: 'Poppins', sans-serif;
-    color: var(--blue-12);
-    height: 100vh;
-    margin: 0;
-    text-align: center;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  color: var(--slate-12);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  background-color: var(--blue-1);
+  color: var(--slate-12);
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.section-container {
+  max-width: 768px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: left;
+}
+
+#under-construction {
+  position: sticky;
+  margin: 0;
+  width: 90%;
+  text-align: center;
+  top: 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--slate-a12);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--slate-1);
 }
 
 h1 {
-    margin: 0;
-    font-size: 32px;
-    line-height: 1.125;
-    font-weight: 600;
-    letter-spacing: .004em;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  display: flex;
+  gap: 1rem;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
 }
 
 h5 {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.21;
-    font-weight: 400;
-    letter-spacing: 0em;
+  font-size: 16px;
+  text-align: center;
 }
 
-.lucide {
-    stroke: var(--slate-12);
+.avatar {
+  border-radius: 100%;
+  height: 128px;
+  width: 128px;
 }
 
-.wrapper {
-    height: 80%;
-    display: flex;
-    justify-content: center;
+.buttonlist {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  gap: 1rem;
+  max-width: 600px;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    width: 100%;
-    padding: 1rem;
+.buttonlist a {
+  display: flex;
+  flex: 1 0 30%;
+  justify-content: space-between;
+  gap: 1rem;
+  line-height: 24px;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  color: var(--slate-1);
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: var(--slate-a12);
+  backdrop-filter: blur(5px);
 }
 
-.portrait {
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    width: 8rem;
-}
-
-.links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 2rem;
-}
-
-a {
-    padding: 1.25rem;
-    background-color: var(--slate-5);
-    border-radius: 0.5rem;
-    display: flex;
-}
-
-a:hover {
-    background-color: var(--slate-7);
+.buttonlist a:hover {
+  box-shadow: 0px 0px 0px 6px var(--slate-a11);
 }
