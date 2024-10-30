@@ -202,9 +202,9 @@ h5 {
 
 .buttonlist a {
   display: flex;
-  flex: 0 0 30%;
   justify-content: space-between;
   gap: 1rem;
+  width: 45%;
   line-height: 24px;
   font-weight: 600;
   border-radius: 0.5rem;
