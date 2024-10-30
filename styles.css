@@ -80,7 +80,7 @@ main {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 #starCanvas {
@@ -202,7 +202,7 @@ h5 {
 
 .buttonlist a {
   display: flex;
-  flex: 1 0 30%;
+  flex: 0 0 30%;
   justify-content: space-between;
   gap: 1rem;
   line-height: 24px;
